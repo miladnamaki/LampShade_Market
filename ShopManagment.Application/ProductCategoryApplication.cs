@@ -43,7 +43,7 @@ namespace ShopManagment.Application
         public OperationResult Edit(EditProductCategory command)
         {
             var Operation = new OperationResult();
-            var productCategory = _productCategoryRepository.GetBy(command.Id);
+            var productCategory = _productCategoryRepository.Get(command.Id);
             if (productCategory==null)
             {
                 return Operation.Failed("رکورد با اطلاعات درخواست شده یافت نشد ، مجدد تلاش بفرمایید");
